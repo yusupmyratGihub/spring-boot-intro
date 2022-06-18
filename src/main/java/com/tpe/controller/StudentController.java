@@ -16,20 +16,16 @@ import com.tpe.service.StudentService;
 @RestController
 @RequestMapping("/students")
 public class StudentController {
-	
-	@Autowired
-	private StudentService studentService;
-	
-	@RequestMapping("/welcome")
 
-	public String welcome() {
-		return "Welcome to Student Controller";	
-	}
-	
-	
+    @Autowired
+    private StudentService studentService;
 
-	
-	
-	
-	
+    @RequestMapping("/welcome")
+
+    public String welcome() {
+
+        return "Welcome to Student Controller";
+    }
+
+
 }
