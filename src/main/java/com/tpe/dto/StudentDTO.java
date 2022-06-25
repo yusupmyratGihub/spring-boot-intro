@@ -8,6 +8,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import com.tpe.domain.Student;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -48,4 +50,25 @@ public class StudentDTO {
 
 
     private LocalDateTime createDate=LocalDateTime.now();
+
+
+    public StudentDTO(Student student) {
+        this.id=student.getId();
+        this.firstName=student.getFirstName();
+        this.lastName=student.getLastName();
+        this.grade=student.getGrade();
+        this.email=student.getEmail();
+        this.phoneNumber=student.getPhoneNumber();
+        this.createDate=student.getCreateDate();
+    }
+
+
+
+
+
+
+
+
+
+
 }

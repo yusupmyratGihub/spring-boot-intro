@@ -1,4 +1,5 @@
 package com.tpe.service;
+
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -17,4 +18,8 @@ public interface StudentService {
 	void updateStudent(Long id, StudentDTO student);
 	void deleteStudent(Long id);
 	Page<Student> getAllWithPage(Pageable pageable);
+	List<Student> findAllEqualsGrade(Integer grade);
+	StudentDTO findStudentDTOById(Long id);
+
+
 }
